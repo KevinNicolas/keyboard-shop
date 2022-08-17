@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const HomeStyles = styled.section`
-  --header-size: 7rem;
-
   & {
+    --header-height: 7rem;
+
     display: grid;
-    grid-template-rows: var(--header-size) calc(100vh - var(--header-size));
+    grid-template-rows: var(--header-height) calc(100% - var(--header-height));
   }
 `;
 

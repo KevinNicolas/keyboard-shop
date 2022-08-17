@@ -6,5 +6,8 @@ export const Colors = createGlobalStyle`
     --background-color-2: #51557E;
     --font-color: #FEFEFE;
     --primary: #816797;
+
+    --scrollbar-color: #CBA1ED;
+    --scrollbar-background: #FAFAFA
   }
 `;

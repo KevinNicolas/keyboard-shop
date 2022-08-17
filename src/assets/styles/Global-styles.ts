@@ -4,6 +4,7 @@ export const GlobalStyles = createGlobalStyle`
   * {
     border: none;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     outline: none;
     padding: 0;
@@ -18,5 +19,21 @@ export const GlobalStyles = createGlobalStyle`
 
   span, h1, h2, h3 {
     color: var(--font-color);
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-background);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
   }
 `;
