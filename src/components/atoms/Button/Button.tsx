@@ -2,6 +2,7 @@ import ButtonStyles from './Button.styles';
 import { motion } from 'framer-motion';
 
 interface ComponentProps {
+  animate?: boolean;
   children: JSX.Element | string;
   className?: string;
   customStyles?: {
@@ -11,17 +12,19 @@ interface ComponentProps {
     textColor?: string;
     transitionTime?: number;
   };
+  onClick: Function;
 }
 
-export const Button = ({ children, className, customStyles }: ComponentProps) => {
+export const Button = ({ animate = true, children, className, customStyles, onClick }: ComponentProps) => {
   const transitionTime = customStyles?.transitionTime ?? 0.8;
 
   return (
     <motion.div
       className={className}
       transition={{ type: 'spring', duration: transitionTime, bounce: 0.5 }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={animate ? { scale: 1.05 } : {}}
+      whileTap={animate ? { scale: 0.95 } : {}}
+      onClick={(event) => onClick(event)}
     >
       <ButtonStyles
         backgroundColor={customStyles?.backgroundColor}

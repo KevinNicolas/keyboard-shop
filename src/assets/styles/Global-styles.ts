@@ -15,6 +15,7 @@ export const GlobalStyles = createGlobalStyle`
     background: var(--background-color);
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
   }
 
   span, h1, h2, h3 {

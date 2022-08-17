@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 export const KeyboardCard = () => {
   return (
     <motion.div
-      transition={{ type: 'spring', duration: 0.5, bounce: 0.4 }}
+      transition={{ type: 'spring', duration: 0.8, bounce: 0.4 }}
       whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
     >
       <KeyboardCardStyles>
         <img
