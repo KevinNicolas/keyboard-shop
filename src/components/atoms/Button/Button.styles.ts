@@ -6,6 +6,7 @@ interface StyleProps {
   fontSize?: number;
   textColor?: string;
   transitionTime?: number;
+  width?: string;
 }
 
 export const ButtonStyles = styled.button<StyleProps>`
@@ -17,6 +18,7 @@ export const ButtonStyles = styled.button<StyleProps>`
     padding: 0.8em 1.8em;
     transition: all ${({ transitionTime = 0.3 }) => `${transitionTime}s`} ease-in-out;
     font-weight: ${({ bold }) => (bold ? 600 : 500)};
+    width: ${({ width }) => width};
   }
 
   &:hover {

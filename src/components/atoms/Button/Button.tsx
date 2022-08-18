@@ -6,16 +6,17 @@ interface ComponentProps {
   children: JSX.Element | string;
   className?: string;
   customStyles?: {
+    width?: string;
     backgroundColor?: string;
     bold?: boolean;
     fontSize?: number;
     textColor?: string;
     transitionTime?: number;
   };
-  onClick: Function;
+  onClick?: Function;
 }
 
-export const Button = ({ animate = true, children, className, customStyles, onClick }: ComponentProps) => {
+export const Button = ({ animate = true, children, className, customStyles, onClick = () => {} }: ComponentProps) => {
   const transitionTime = customStyles?.transitionTime ?? 0.8;
 
   return (
@@ -32,6 +33,7 @@ export const Button = ({ animate = true, children, className, customStyles, onCl
         fontSize={customStyles?.fontSize}
         textColor={customStyles?.textColor}
         transitionTime={transitionTime - 0.3}
+        width={customStyles?.width}
       >
         {typeof children === 'string' ? <span>{children}</span> : children}
       </ButtonStyles>

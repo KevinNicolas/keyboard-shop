@@ -16,12 +16,7 @@ export const Body = ({ setDisplayView }: BodyProps) => {
   const navigate = useNavigate();
 
   const handleSearchBarClick = () => (searchBar as any).current.focus();
-  const handleSearchButtonClick = () => {
-    setDisplayView(false);
-    setTimeout(() => {
-      navigate('/auth/login');
-    }, 1500);
-  };
+  const handleSearchButtonClick = () => navigate('/auth/login');
 
   return (
     <BodyStyles>

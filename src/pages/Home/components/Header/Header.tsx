@@ -15,13 +15,7 @@ interface HeaderProps {
 
 export const Header = ({ setDisplayView }: HeaderProps) => {
   const navigate = useNavigate();
-
-  const handleLoginClick = () => {
-    setDisplayView(false);
-    setTimeout(() => {
-      navigate('/auth');
-    }, 1500);
-  };
+  const handleLoginClick = () => navigate('/auth');
 
   return (
     <HeaderStyles>

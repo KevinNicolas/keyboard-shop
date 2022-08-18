@@ -11,8 +11,9 @@ export const Home = () => {
 
   return (
     <motion.section
-      animate={{ opacity: displayView ? 1 : 0 }}
-      transition={{ duration: 1 }}
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 1 }}
+      transition={{ type: 'tween', duration: 1 }}
     >
       <HomeStyles>
         <Header setDisplayView={setDisplayView} />
